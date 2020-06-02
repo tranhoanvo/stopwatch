@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch | Tran Hoan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Your Stopwatch</h1>
+        <div class="timer-container">
+            <p class="time-text" id="minute-display">00</p>
+            <p class="time-text">:</p>
+            <p class="time-text" id="second-display">00</p>
+            <p class="time-text">:</p>
+            <p class="time-text" id="milisecond-display">00</p>
+        </div>
+        <div class="btn-container">
+            <button class="func-btn" onclick="startOrStop()">Start/Stop</button>
+            <button class="func-btn" onclick="lapTimer()">Lap</button>
+            <button class="func-btn" onclick="resetTimer()">Reset</button>
+        </div>
+        <div class="lap-table-container">
+            <h5 class="lap-title">Lap Round</h5>
+            <table id="lap-table">
+            </table>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
