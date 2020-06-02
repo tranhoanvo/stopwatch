@@ -18,14 +18,16 @@ function startOrStop() {
 function modifyTimer() {
     if (milisec < 100) {
         milisec += 1;
-        document.getElementById("milisecond-display").innerHTML = milisec.toLocaleString(undefined, { minimumIntegerDigits: 2 });
+        document.getElementById("milisecond-display").innerHTML = milisec==100 ? "00" : milisec.toLocaleString(undefined, { minimumIntegerDigits: 2 });
     } else {
         milisec = 1;
+        document.getElementById("milisecond-display").innerHTML = milisec.toLocaleString(undefined, { minimumIntegerDigits: 2 });
         if (sec < 60) {
             sec += 1;
-            document.getElementById("second-display").innerHTML = sec.toLocaleString(undefined, { minimumIntegerDigits: 2 });
+            document.getElementById("second-display").innerHTML = sec==60 ? "00" :  sec.toLocaleString(undefined, { minimumIntegerDigits: 2 });
         } else {
             sec = 1;
+            document.getElementById("second-display").innerHTML = sec.toLocaleString(undefined, { minimumIntegerDigits: 2 });
             if (minute < 60) {
                 minute += 1;
                 document.getElementById("minute-display").innerHTML = minute.toLocaleString(undefined, { minimumIntegerDigits: 2 });
@@ -48,6 +50,7 @@ function lapTimer() {
         lapBody.id = "lap-records";
         document.getElementById("lap-table").appendChild(lapBody);
     };
+
     let lapRecord = document.createElement("tr");
     lapRecord.innerHTML = `<td>${counter}</td>
     <td>${minute.toLocaleString(undefined, { minimumIntegerDigits: 2 })}:${sec.toLocaleString(undefined, { minimumIntegerDigits: 2 })}:${milisec.toLocaleString(undefined, { minimumIntegerDigits: 2 })}</td>`;

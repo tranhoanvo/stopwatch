@@ -1,5 +1,5 @@
 :root {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 body {
@@ -15,9 +15,6 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-    :root {
-        font-size: 14px;
-    }
 
     .container {
         padding: 25px !important;
@@ -50,8 +47,8 @@ body {
 .container {
     width: 75vw;
     min-width: 250px;
-    max-width: 700px;
-    margin: 0 auto 75px;
+    max-width: 550px;
+    margin: 0 auto 50px;
     padding: 50px;
     display: flex;
     flex-direction: column;
